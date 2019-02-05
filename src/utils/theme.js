@@ -1,4 +1,4 @@
-const breakpoints = [576, 768, 992, 1200]
+export const breakpoints = [576, 688, 768, 992, 1200]
 
 export const mq = breakpoints.map(
   bp => `@media (min-width: ${bp}px)`
@@ -29,8 +29,8 @@ const blue = {
 }
 
 export const colors = {
-  fg: '#07271B',
-  bg: '#FBFAF9',
+  fg: '#200201',
+  bg: '#FFFEF4',
   orange,
   green,
   blue

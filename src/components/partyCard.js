@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { mq, colors } from '../utils/theme'
 
 const PartyCard = ({ title, date, location }) => (
   <div css={styles.wrapper}>
@@ -12,23 +13,37 @@ const PartyCard = ({ title, date, location }) => (
 const styles = {
   wrapper: {
     padding: '1rem',
+    minWidth: '8rem',
     maxWidth: '20rem',
     marginBottom: '1.5rem'
   },
   title: {
-    fontSize: '1rem',
-    lineHeight: '1.5rem',
+    fontSize: '.75rem',
+    lineHeight: '1.2',
     fontWeight: '700',
-    marginBottom: '.25rem'
+    marginBottom: '.25rem',
+    color: colors.orange.darkest,
+    [mq[1]]: {
+      fontSize: '1rem',
+      lineHeight: '1.5',
+    }
   },
   date: {
-    fontSize: '2rem',
-    lineHeight: '1.5rem',
+    fontSize: '1.75rem',
+    lineHeight: '1.2',
     fontWeight: '300',
-    marginBottom: '.25rem'
+    marginBottom: '.25rem',
+    [mq[1]]: {
+      fontSize: '1.5rem',
+      lineHeight: '1.5',
+    }
   },
   location: {
-    fontWeight: '300'
+    fontSize: '.65rem',
+    fontWeight: '300',
+    [mq[1]]: {
+      fontSize: '1rem'
+    }
   }
 }
 

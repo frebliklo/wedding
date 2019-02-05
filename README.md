@@ -5,7 +5,7 @@ Gatsby site with information to the guests of my wedding :D
 ### Local messing around
 
 ```bash
-npm run develop
+npm run dev
 ```
 
 ### Production build
