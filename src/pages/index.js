@@ -6,8 +6,6 @@ import Signature from '../components/signature'
 import Container from '../components/container'
 import PartyCard from '../components/partyCard'
 
-import flowersImage from '../images/blomster.png'
-
 import { breakpoints, mq, colors } from '../utils/theme'
 
 class IndexPage extends React.Component {
@@ -69,7 +67,7 @@ class IndexPage extends React.Component {
               />
             </div>
           </Container>
-          <img css={styles.flowers} src={flowersImage} />
+          <img css={styles.flowers} src="https://res.cloudinary.com/frebliklo/image/upload/v1549399485/wedding/blomster.png" />
         </section>
       </Layout>
     )
