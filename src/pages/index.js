@@ -67,7 +67,7 @@ class IndexPage extends React.Component {
               />
             </div>
           </Container>
-          <img css={styles.flowers} src="https://res.cloudinary.com/frebliklo/image/upload/v1549399485/wedding/blomster.png" />
+          <img css={styles.flowers} src="https://res.cloudinary.com/frebliklo/image/upload/c_scale,f_auto,q_auto,w_1600/v1549399485/wedding/blomster.png" />
         </section>
       </Layout>
     )
