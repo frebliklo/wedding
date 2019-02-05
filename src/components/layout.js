@@ -7,7 +7,7 @@ import Footer from './footer'
 
 import './global.css'
 
-const Layout = ({ children, header }) => (
+const Layout = ({ children, header, footer }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -22,7 +22,7 @@ const Layout = ({ children, header }) => (
       <div css={styles.screen}>
         {header && <Header siteTitle={data.site.siteMetadata.title} />}
         <main css={styles.content}>{children}</main>
-        <Footer />
+        {footer && <Footer />}
       </div>
     )}
   />
@@ -45,11 +45,13 @@ const styles = {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  header: PropTypes.bool
+  header: PropTypes.bool,
+  footer: PropTypes.bool
 }
 
 Layout.defaultProps = {
-  header: true
+  header: true,
+  footer: true
 }
 
 export default Layout

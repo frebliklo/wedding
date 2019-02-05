@@ -6,6 +6,8 @@ import Signature from '../components/signature'
 import Container from '../components/container'
 import PartyCard from '../components/partyCard'
 
+import flowersImage from '../images/blomster.png'
+
 import { breakpoints, mq, colors } from '../utils/theme'
 
 class IndexPage extends React.Component {
@@ -47,41 +49,50 @@ class IndexPage extends React.Component {
     const { reception, party } = this.state
 
     return (
-      <Layout header={false}>
+      <Layout header={false} footer={false}>
         <SEO title="Bryllup" keywords={['bryllup', 'fest', 'praktisk info']} />
-        <Container styles={styles.container}>
-          <h1 css={styles.title}>
-            <Signature fill={colors.green.darker} />
-          </h1>
-          <div css={styles.partiesContainer}>
-            <PartyCard
-              title={reception.title}
-              date={reception.date}
-              location={reception.location}
-            />
-            <PartyCard
-              title={party.title}
-              date={party.date}
-              location={party.location}
-            />
-          </div>
-        </Container>
+        <section css={styles.section}>
+          <Container>
+            <h1 css={styles.title}>
+              <Signature fill={colors.green.darker} />
+            </h1>
+            <div css={styles.partiesContainer}>
+              <PartyCard
+                title={reception.title}
+                date={reception.date}
+                location={reception.location}
+              />
+              <PartyCard
+                title={party.title}
+                date={party.date}
+                location={party.location}
+              />
+            </div>
+          </Container>
+          <img css={styles.flowers} src={flowersImage} />
+        </section>
       </Layout>
     )
   }
 }
 
 const styles = {
-  container: {
-    flex: 1,
+  section: {
+    position: 'relative',
+    width: '100vw',
+    height: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   title: {
     width: '100%',
     textAlign: 'center',
-    margin: '30vh 0',
-    [mq[2]]: {
-      margin: '3rem 0'
-    }
+    margin: '3rem 0',
+    // [mq[2]]: {
+    //   margin: '3rem 0'
+    // }
   },
   partiesContainer: {
     width: '90%',
@@ -90,6 +101,17 @@ const styles = {
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     alignItems: 'center'
+  },
+  flowers: {
+    position: 'absolute',
+    top: 'auto',
+    right: 0,
+    bottom: 0,
+    left: 'auto',
+    margin: 0,
+    [mq[2]]: {
+      width: '60%'
+    }
   }
 }
 

@@ -40,9 +40,10 @@ const styles = {
   },
   location: {
     fontSize: '.65rem',
-    fontWeight: '300',
+    fontWeight: '400',
     [mq[1]]: {
-      fontSize: '1rem'
+      fontSize: '1rem',
+      fontWeight: '300'
     }
   }
 }
