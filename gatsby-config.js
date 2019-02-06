@@ -28,9 +28,9 @@ module.exports = {
         name: 'gatsby-starter-default',
         short_name: 'SaraFrederik',
         start_url: '/',
-        background_color: '#FBFAF9',
-        theme_color: '#FBFAF9',
-        display: 'minimal-ui',
+        background_color: '#FFFEF4',
+        theme_color: '#FFFEF4',
+        display: 'fullscreen',
         icon: 'src/images/site-icon.png', // This path is relative to the root of the site.
       },
     },

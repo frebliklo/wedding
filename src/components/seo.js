@@ -35,12 +35,16 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: 'website',
               },
               {
+                property: 'og:image',
+                content: 'https://res.cloudinary.com/frebliklo/image/upload/c_scale,f_auto,q_auto,w_1600/v1549399485/wedding/blomster.png'
+              },
+              {
                 name: 'twitter:card',
                 content: 'summary',
               },
               {
                 name: 'twitter:creator',
-                content: data.site.siteMetadata.author,
+                content: '@klovborg',
               },
               {
                 name: 'twitter:title',
