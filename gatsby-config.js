@@ -25,8 +25,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'SaraFrederik',
+        name: 'Sara + Frederik bryllup',
+        short_name: 'SaFrBryllup',
         start_url: '/',
         background_color: '#FFFEF4',
         theme_color: '#FFFEF4',
