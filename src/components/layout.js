@@ -7,9 +7,26 @@ import Footer from './footer'
 
 import './global.css'
 
-const Layout = ({ children, header, footer }) => (
-  <StaticQuery
-    query={graphql`
+class Layout extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      minHeight: 667
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ minHeight: window.innerHeight })
+  }
+  
+  render() {
+    const { children, header, footer } = this.props
+    const { minHeight } = this.state
+
+    return (
+      <StaticQuery
+        query={graphql`
       query SiteTitleQuery {
         site {
           siteMetadata {
@@ -18,22 +35,23 @@ const Layout = ({ children, header, footer }) => (
         }
       }
     `}
-    render={data => (
-      <div css={styles.screen}>
-        {header && <Header siteTitle={data.site.siteMetadata.title} />}
-        <main css={styles.content}>{children}</main>
-        {footer && <Footer />}
-      </div>
-    )}
-  />
-)
+        render={data => (
+          <div css={{ ...styles.screen, minHeight }}>
+            {header && <Header siteTitle={data.site.siteMetadata.title} />}
+            <main css={styles.content}>{children}</main>
+            {footer && <Footer />}
+          </div>
+        )}
+      />
+    )
+  }
+}
 
 const styles = {
   screen: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    minHeight: '100vh',
   },
   content: {
     display: 'flex',
