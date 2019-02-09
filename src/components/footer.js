@@ -5,7 +5,7 @@ import Container from './container'
 
 const Footer = () => (
   <footer css={styles.wrapper}>
-    <Container>
+    <Container styles={{ alignItems: 'center', padding: '0 1rem 2rem' }}>
       <Link to="/">&copy; Sara + Frederik</Link>
     </Container>
   </footer>

@@ -54,6 +54,19 @@ class IndexPage extends React.Component {
   }
 
   componentDidMount() {
+    if(window.innerWidth <= breakpoints[0]) {
+      this.setState({
+        reception: {
+          ...this.state.reception,
+          date: '15 / 6',
+        },
+        party: {
+          ...this.state.party,
+          date: '26 / 10'
+        }
+      })
+    }
+
     window.addEventListener('resize', this.handleResize)
   }
 
@@ -68,7 +81,7 @@ class IndexPage extends React.Component {
       <Layout header={false} footer={false}>
         <SEO title="Bryllup" keywords={['bryllup', 'fest', 'praktisk info']} />
         <section css={styles.section}>
-          <Container>
+          <Container styles={{ alignItems: 'center', padding: '0 1rem 2rem' }}>
             <h1 css={styles.title}>
               <Signature fill={colors.green.darker} />
             </h1>
@@ -119,7 +132,7 @@ const styles = {
     alignItems: 'center'
   },
   flowers: {
-    position: 'absolute',
+    position: 'fixed',
     top: 'auto',
     right: 0,
     bottom: 0,

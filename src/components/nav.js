@@ -39,7 +39,6 @@ class Nav extends React.Component {
   
   handleClick = () => {
     this.setState({ navOpen: !this.state.navOpen })
-    console.log(this.state.navOpen)
   }
   
   render() {
@@ -55,7 +54,7 @@ class Nav extends React.Component {
             </NavContainer>)
           }
         </PoseGroup>
-        <button css={styles.menuButton} onClick={this.handleClick}>Menu</button>
+        <button css={styles.menuButton} onClick={this.handleClick}>{navOpen ? 'Close' : 'Menu'}</button>
       </>
     )
   }
