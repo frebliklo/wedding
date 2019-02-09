@@ -26,21 +26,39 @@ class IndexPage extends React.Component {
     }
   
   }
-  
-  componentDidMount() {
+
+  handleResize = () => {
     if(window.innerWidth <= breakpoints[0]) {
       this.setState({
         reception: {
           ...this.state.reception,
           date: '15 / 6',
-          // location: 'Kbh Rådhus'
         },
         party: {
           ...this.state.party,
           date: '26 / 10'
         }
       })
+    } else {
+      this.setState({
+        reception: {
+          ...this.state.reception,
+          date: '15. juni 11:00',
+        },
+        party: {
+          ...this.state.party,
+          date: '26. oktober 16:00'
+        }
+      })
     }
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize)
   }
 
   render() {

@@ -21,7 +21,7 @@ const styles = {
     fontSize: '.75rem',
     lineHeight: '1.2',
     fontWeight: '700',
-    marginBottom: '.25rem',
+    marginBottom: 0,
     color: colors.orange.darkest,
     [mq[1]]: {
       fontSize: '1rem',
@@ -32,7 +32,7 @@ const styles = {
     fontSize: '1.75rem',
     lineHeight: '1.2',
     fontWeight: '300',
-    marginBottom: '.25rem',
+    marginBottom: 0,
     [mq[1]]: {
       fontSize: '1.5rem',
       lineHeight: '1.5',
