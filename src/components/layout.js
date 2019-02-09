@@ -17,7 +17,11 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ minHeight: window.innerHeight })
+    window.addEventListener('resize', () => this.setState({ minHeight: window.innerHeight }))
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', () => this.setState({ minHeight: window.innerHeight }))
   }
   
   render() {
