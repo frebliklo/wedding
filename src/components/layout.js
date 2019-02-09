@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import Footer from './footer'
+import Nav from './nav'
 
 import './global.css'
 
@@ -31,19 +32,20 @@ class Layout extends React.Component {
     return (
       <StaticQuery
         query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+          query SiteTitleQuery {
+            site {
+              siteMetadata {
+                title
+              }
+            }
           }
-        }
-      }
-    `}
+        `}
         render={data => (
           <div css={{ ...styles.screen, minHeight }}>
             {header && <Header siteTitle={data.site.siteMetadata.title} />}
             <main css={styles.content}>{children}</main>
             {footer && <Footer />}
+            <Nav />
           </div>
         )}
       />
@@ -72,7 +74,7 @@ Layout.propTypes = {
 }
 
 Layout.defaultProps = {
-  header: true,
+  header: false,
   footer: true
 }
 
