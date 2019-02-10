@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
 import Footer from './footer'
 import Nav from './nav'
 
@@ -26,29 +24,15 @@ class Layout extends React.Component {
   }
   
   render() {
-    const { children, header, footer } = this.props
+    const { children, footer, path } = this.props
     const { minHeight } = this.state
 
     return (
-      <StaticQuery
-        query={graphql`
-          query SiteTitleQuery {
-            site {
-              siteMetadata {
-                title
-              }
-            }
-          }
-        `}
-        render={data => (
-          <div css={{ ...styles.screen, minHeight }}>
-            {header && <Header siteTitle={data.site.siteMetadata.title} />}
-            <main css={styles.content}>{children}</main>
-            {footer && <Footer />}
-            <Nav />
-          </div>
-        )}
-      />
+      <div css={{ ...styles.screen, minHeight }}>
+        <Nav location={path} />
+        <main css={styles.content}>{children}</main>
+        {footer && <Footer />}
+      </div>
     )
   }
 }
@@ -61,6 +45,7 @@ const styles = {
   },
   content: {
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1
@@ -69,12 +54,11 @@ const styles = {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  header: PropTypes.bool,
-  footer: PropTypes.bool
+  footer: PropTypes.bool,
+  path: PropTypes.string.isRequired
 }
 
 Layout.defaultProps = {
-  header: false,
   footer: true
 }
 

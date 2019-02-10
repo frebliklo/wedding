@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -75,10 +76,11 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    const { pathname } = this.props.location
     const { reception, party } = this.state
 
     return (
-      <Layout header={false} footer={false}>
+      <Layout path={pathname} footer={false}>
         <SEO title="Bryllup" keywords={['bryllup', 'fest', 'praktisk info']} />
         <section css={styles.section}>
           <Container styles={{ alignItems: 'center', padding: '0 1rem 2rem' }}>
@@ -142,6 +144,10 @@ const styles = {
       width: '60%'
     }
   }
+}
+
+IndexPage.propTypes = {
+  location: PropTypes.object.isRequired
 }
 
 export default IndexPage

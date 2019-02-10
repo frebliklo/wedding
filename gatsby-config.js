@@ -26,7 +26,7 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Sara + Frederik bryllup',
-        short_name: 'SaFrBryllup',
+        short_name: 'SF Bryllup',
         start_url: '/',
         background_color: '#FFFEF4',
         theme_color: '#FFFEF4',
