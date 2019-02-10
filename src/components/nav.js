@@ -114,7 +114,8 @@ const styles = {
     left: 16,
     zIndex: 5,
     cursor: 'pointer',
-    border: 'none'
+    border: 'none',
+    background: 'transparent'
   },
   navContainer: {
     position: 'absolute',
