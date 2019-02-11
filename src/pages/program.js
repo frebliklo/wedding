@@ -32,7 +32,7 @@ const Program = ({ location }) => (
 const styles = {
   section: {
     position: 'relative',
-    width: '100vw',
+    width: '100%',
     minHeight: '90vh',
     display: 'flex',
     flexDirection: 'column',

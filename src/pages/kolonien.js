@@ -51,7 +51,7 @@ const styles = {
   },
   section: {
     position: 'relative',
-    width: '100vw',
+    width: '100%',
     minHeight: '40vh',
     display: 'flex',
     flexDirection: 'column',
