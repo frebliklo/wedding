@@ -134,12 +134,15 @@ const styles = {
     alignItems: 'center'
   },
   flowers: {
-    position: 'fixed',
+    position: 'absolute',
     top: 'auto',
     right: 0,
     bottom: 0,
     left: 'auto',
     margin: 0,
+    [mq[1]]: {
+      position: 'fixed'
+    },
     [mq[2]]: {
       width: '60%'
     }
