@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { darken } from 'polished'
@@ -7,6 +8,7 @@ import SEO from '../components/seo'
 import Container from '../components/container'
 
 import { colors } from '../utils/theme'
+import LinkIcon from '../components/linkIcon'
 
 const Wishlist = ({ location }) => (
   <Layout footer={true} path={location.pathname}>
@@ -29,8 +31,18 @@ const Wishlist = ({ location }) => (
         <h3 css={{ color: colors.orange.darkest }}>Andre ønsker</h3>
         <ul>
           <li>Oplevelser med giveren</li>
-          <li>Eva Solo kasserolle 1,1L rustfrit stål</li>
-          <li>Jamie Oliver/Tefal stålwok med håndtag 28cm</li>
+          <li>
+            <a href="https://www.evasolo.com/da/kokken/gryder-og-pander/kasseroller/rustfrit-stal/202411/" target="_blank" rel="noopener noreferer">
+              Eva Solo kasserolle 1,1L rustfrit stål
+              <LinkIcon width={12} height={12} css={{ marginLeft: 8 }} />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tefal.dk/Kogegrej/Gryder-%26-pander/Advanced/Jamie-Oliver-Premium-Stainless-Steel/p/R-JO-Premium-Stainless-steel-NO" target="_blank" rel="noopener noreferer">
+              Jamie Oliver Premium Stainless Steel Sauterpande 24cm
+              <LinkIcon width={12} height={12} css={{ marginLeft: 8 }} />
+            </a>
+          </li>
           <li>Granitplade til køkken</li>
         </ul>
       </Container>
