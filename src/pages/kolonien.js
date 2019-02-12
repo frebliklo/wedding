@@ -3,9 +3,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-import ColonyMap from '../components/colonyMap'
 import Container from '../components/container'
 import Layout from '../components/layout'
+import PigeonMap from '../components/pigeonMap'
 import SEO from '../components/seo'
 
 import { colors, mq } from '../utils/theme'
@@ -22,7 +22,7 @@ class Colony extends React.Component {
       <Layout footer={true} path={location.pathname}>
         <SEO title="Kolonien" keywords={['bryllup', 'fest', 'kolonien', 'lokation']} />
         <section css={styles.mapContainer}>
-          <ColonyMap onClick={this.onGetDirections} />
+          <PigeonMap onClick={this.onGetDirections} />
         </section>
         <section css={styles.section}>
           <Container styles={styles.container}>
