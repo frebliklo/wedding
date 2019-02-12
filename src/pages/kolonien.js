@@ -12,7 +12,7 @@ import { colors, mq } from '../utils/theme'
 
 class Colony extends React.Component {
   onGetDirections = () => {
-    window.location = this.props.mapsLink
+    window.open(this.props.mapsLink)
   }
 
   render() {
