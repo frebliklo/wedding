@@ -2,7 +2,15 @@
 
 ## Wedding invitation and info
 
-Gatsby site with information to the guests of my wedding :D Hosted on Netlify at [sarafrederik.com](https://sarafrederik.com)
+Static with information to the guests of my wedding :D Hosted on Netlify at [sarafrederik.com](https://sarafrederik.com)
+
+## Technologies
+
+The site is built with Gatsby to make it easy to build a static site written in React. The plugin system also makes it possible to easily integrate stuff, that would otherwise require a little more setup.
+
+Styling is done with Emotion because I wanted to experiment with writing object styles as well as having the possibility to write some good old CSS.
+
+Animations are done with Pose which is insanely awesome - if you work with React you need to check it out.
 
 ### Local messing around
 
