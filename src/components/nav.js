@@ -9,7 +9,7 @@ import navLinkStyles from './styled/navLinkStyles'
 
 import menuAnimation from '../animations/menu-animation.json'
 
-import { colors } from '../utils/theme'
+import { colors, mq } from '../utils/theme'
 
 const NavContainer = posed.nav({
   enter: {
@@ -117,11 +117,12 @@ const styles = {
     top: 16,
     right: 'auto',
     bottom: 'auto',
-    left: 16,
+    left: 8,
     zIndex: 5,
     cursor: 'pointer',
     border: 'none',
-    background: 'transparent'
+    background: 'transparent',
+    [mq[0]]: { left: 16 }
   },
   navContainer: {
     position: 'absolute',
