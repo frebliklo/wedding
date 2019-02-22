@@ -25,7 +25,7 @@ const NavContainer = posed.nav({
   }
 })
 
-const NavLink = posed.button({
+const NavLink = posed.div({
   enter: {
     opacity: 1,
     y: 0
@@ -89,10 +89,11 @@ class Nav extends React.Component {
                 return (
                   <NavLink
                     key={`navLink${i}`}
-                    css={navLinkStyles}
+                    css={{ overflow: 'hidden', marginBottom: 8 }}
                     onClick={() => this.handleLinkClick(to)}
                   >
                     <TransitionLink
+                      css={navLinkStyles}
                       to={to}
                       exit={{ duration: 0.2 }}
                       entry={{ delay: 0.2 }}
