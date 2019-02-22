@@ -16,7 +16,7 @@ class IndexPage extends React.Component {
     this.state = {
       reception: {
         title: 'Reception',
-        date: '15. juni 11:00',
+        date: '15. juni 12:00',
         location: 'Københavns Rådhus'
       },
       party: {
@@ -44,7 +44,7 @@ class IndexPage extends React.Component {
       this.setState({
         reception: {
           ...this.state.reception,
-          date: '15. juni 11:00',
+          date: '15. juni 12:00',
         },
         party: {
           ...this.state.party,

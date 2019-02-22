@@ -17,7 +17,7 @@ const containerStyles = {
   margin: '0 auto',
   width: '100%',
   maxWidth: 688,
-  padding: '4rem 1rem 2rem',
+  padding: '4rem 1.5rem 2rem',
   [mq[1]]: {
     padding: '0 1rem 2rem',
   }

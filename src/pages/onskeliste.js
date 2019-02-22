@@ -3,12 +3,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { darken } from 'polished'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
 import Container from '../components/container'
+import Layout from '../components/layout'
+import LinkIcon from '../components/linkIcon'
+import SEO from '../components/seo'
+
+import wishLinkStyles from '../components/styled/wishLinkStyles'
 
 import { colors } from '../utils/theme'
-import LinkIcon from '../components/linkIcon'
 
 const Wishlist = ({ location }) => (
   <Layout footer={true} path={location.pathname}>
@@ -32,15 +34,15 @@ const Wishlist = ({ location }) => (
         <ul>
           <li>Oplevelser med giveren</li>
           <li>
-            <a href="https://www.evasolo.com/da/kokken/gryder-og-pander/kasseroller/rustfrit-stal/202411/" target="_blank" rel="noopener noreferer">
+            <a href="https://www.evasolo.com/da/kokken/gryder-og-pander/kasseroller/rustfrit-stal/202411/" target="_blank" rel="noopener noreferer" css={wishLinkStyles}>
               Eva Solo kasserolle 1,1L rustfrit stål
               <LinkIcon width={12} height={12} css={{ marginLeft: 8 }} />
             </a>
           </li>
           <li>
-            <a href="https://www.tefal.dk/Kogegrej/Gryder-%26-pander/Advanced/Jamie-Oliver-Premium-Stainless-Steel/p/R-JO-Premium-Stainless-steel-NO" target="_blank" rel="noopener noreferer">
+            <a href="https://www.tefal.dk/Kogegrej/Gryder-%26-pander/Advanced/Jamie-Oliver-Premium-Stainless-Steel/p/R-JO-Premium-Stainless-steel-NO" target="_blank" rel="noopener noreferer" css={wishLinkStyles}>
               Jamie Oliver Premium Stainless Steel Sauterpande 24cm
-              <LinkIcon width={12} height={12} css={{ marginLeft: 8 }} />
+              <LinkIcon width={12} height={12} />
             </a>
           </li>
           <li>Granitplade til køkken</li>
