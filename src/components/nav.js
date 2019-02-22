@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import posed, { PoseGroup } from 'react-pose'
 import Lottie from 'lottie-react-web'
 import { rgba } from 'polished'
-import { Link } from 'gatsby'
+import TransitionLink from 'gatsby-plugin-transition-link'
 
 import navLinkStyles from './styled/navLinkStyles'
 
@@ -25,7 +25,7 @@ const NavContainer = posed.nav({
   }
 })
 
-const NavLink = posed(Link)({
+const NavLink = posed.button({
   enter: {
     opacity: 1,
     y: 0
@@ -90,10 +90,15 @@ class Nav extends React.Component {
                   <NavLink
                     key={`navLink${i}`}
                     css={navLinkStyles}
-                    to={to}
                     onClick={() => this.handleLinkClick(to)}
                   >
-                    {label}
+                    <TransitionLink
+                      to={to}
+                      exit={{ duration: 0.2 }}
+                      entry={{ delay: 0.2 }}
+                    >
+                      {label}
+                    </TransitionLink>
                   </NavLink>
                 )
               })}
