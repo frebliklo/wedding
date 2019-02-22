@@ -11,6 +11,7 @@ const navLinkStyles = css`
   margin-bottom: 1rem;
   padding: .125rem .75rem;
   background: ${rgba(colors.orange.darker, 0)};
+  border: none;
   color: ${colors.orange.normal};
   overflow: hidden;
   transition: background 160ms ease-in, color 160ms ease-in;
