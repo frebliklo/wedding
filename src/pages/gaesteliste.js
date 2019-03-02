@@ -13,7 +13,7 @@ const Guestlist = ({ location }) => (
     <section css={styles.section}>
       <Container>
         <h1 css={styles.title}>Gæsteliste</h1>
-        <p><em>Bliver opdateret den 15. maj</em></p>
+        <p><em>Bliver opdateret senere</em></p>
       </Container>
     </section>
   </Layout>

@@ -20,7 +20,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-emotion',
-    'gatsby-plugin-transition-link',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

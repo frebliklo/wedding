@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import PropTypes from 'prop-types'
-import TransitionLink from 'gatsby-plugin-transition-link'
+import { Link } from 'gatsby'
 
 import Container from '../components/container'
 import Layout from '../components/layout'
@@ -27,7 +27,7 @@ class Colony extends React.Component {
         <section css={styles.section}>
           <Container styles={styles.container}>
             <h1 css={styles.title}>Kolonien</h1>
-            <p>Festen bliver holdt på feriekolonien Nørrevang i Rørvig.<br />Der vil være sovepladser på firemands sovesale til alle, der vil overnatte. Se hvad man selv skal medbringe på siden med <TransitionLink css={styles.link} to="/praktisk-info" exit={{ length: 0.2 }} entry={{ delay: 0.4 }}>praktisk information</TransitionLink>.</p>
+            <p>Festen bliver holdt på feriekolonien Nørrevang i Rørvig.<br />Der vil være sovepladser på firemands sovesale til alle, der vil overnatte. Se hvad man selv skal medbringe på siden med <Link css={styles.link} to="/praktisk-info">praktisk information</Link>.</p>
             <p>Adressen på kolonien er <a target="_blank" rel="noopener noreferer" href={mapsLink}>Eriksmindevej 25, 4581 Rørvig</a>. Det tager cirka halvanden time i bil fra København - <a target="_blank" rel="noopener noreferer" href={mapsLink}>få rutevejledning på Google Map <span css={styles.link}>her</span></a>.</p>
             <a target="_blank" rel="noopener noreferer" href={colonyLink}>Find mere info om kolonien <span css={styles.link}>her</span>.</a>
           </Container>

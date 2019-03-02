@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import posed, { PoseGroup } from 'react-pose'
 import Lottie from 'lottie-react-web'
 import { rgba } from 'polished'
-import TransitionLink from 'gatsby-plugin-transition-link'
+import { Link } from 'gatsby'
 
 import navLinkStyles from './styled/navLinkStyles'
 
@@ -25,7 +25,7 @@ const NavContainer = posed.nav({
   }
 })
 
-const NavLink = posed.div({
+const NavLink = posed(Link)({
   enter: {
     opacity: 1,
     y: 0
@@ -47,6 +47,7 @@ class Nav extends React.Component {
       { to: '/program', label: 'Program' },
       { to: '/gaesteliste', label: 'Gæsteliste' },
       { to: '/onskeliste', label: 'Ønskeliste' },
+      { to: '/billeder', label: 'Billeder' },
     ]
 
     this.state = {
@@ -89,17 +90,11 @@ class Nav extends React.Component {
                 return (
                   <NavLink
                     key={`navLink${i}`}
-                    css={{ overflow: 'hidden', marginBottom: 8 }}
+                    to={to}
+                    css={navLinkStyles}
                     onClick={() => this.handleLinkClick(to)}
-                  >
-                    <TransitionLink
-                      css={navLinkStyles}
-                      to={to}
-                      exit={{ duration: 0.2 }}
-                      entry={{ delay: 0.2 }}
-                    >
-                      {label}
-                    </TransitionLink>
+                  >  
+                    {label}
                   </NavLink>
                 )
               })}

@@ -1,17 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import posed from 'react-pose'
-import { TransitionState } from 'gatsby-plugin-transition-link'
 
 import Footer from './footer'
 import Nav from './nav'
 
 import './global.css'
-
-const Screen = posed.div({
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-})
 
 class Layout extends React.Component {
   constructor(props) {
@@ -35,22 +28,11 @@ class Layout extends React.Component {
     const { minHeight } = this.state
 
     return (
-      <TransitionState>
-        {({ transitionStatus }) => (
-          <Screen
-            css={{ ...styles.screen, minHeight }}
-            pose={
-              ['entering', 'entered'].includes(transitionStatus)
-                ? 'visible'
-                : 'hidden'
-            }
-          >
-            <Nav location={path} />
-            <main css={styles.content}>{children}</main>
-            {footer && <Footer />}
-          </Screen>
-        )}
-      </TransitionState>
+      <div css={{ ...styles.screen, minHeight }} >
+        <Nav location={path} />
+        <main css={styles.content}>{children}</main>
+        {footer && <Footer />}
+      </div>
     )
   }
 }
