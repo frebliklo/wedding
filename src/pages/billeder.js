@@ -12,7 +12,7 @@ const Images = () => (
     <section css={styles.section}>
       <Container>
         <h1 css={styles.title}>Billeder</h1>
-        <p>Send os meget gerne jeres billeder fra dagen, så vi kan ligge dem op her.</p>
+        <p>Send os meget gerne jeres billeder fra dagen, så vi kan lægge dem op her.</p>
         <p>Billeder kan sendes på mail til Sara på <a href="mailto:sara.jerichau@gmail.com, klovborg@gmail.com?subject=Billeder fra en dejlig, dejlig dag&cc=julie_vh1@hotmail.com" css={styles.link}>sara.jerichau@gmail.com</a></p>
       </Container>
     </section>
