@@ -45,7 +45,8 @@ const Wishlist = ({ location }) => (
               <LinkIcon width={12} height={12} />
             </a>
           </li>
-          <li>Granitplade til køkken (49 x 57 x 2.7 cm)</li>
+          <li>Mørk granitplade til køkken (49 x 57 x 2.7 cm)</li>
+          <li>Køkkenvægt</li>
         </ul>
       </Container>
     </section>
