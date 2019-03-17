@@ -19,7 +19,7 @@ const Wishlist = ({ location }) => (
       <Container>
         <h1 css={styles.title}>Ønskeliste</h1>
         <p>Vi ønsker os <em css={{ margin: '0 .25rem 0 .125rem' }}>allermest</em> at komme på en skøn bryllupsrejse.</p>
-        <p>Derfor kan bidrag til denne overføres til:</p>
+        <p css={{ marginBottom: '.75rem' }}>Derfor kan bidrag til denne overføres til:</p>
         <div css={styles.accountContainer}>
           <div css={styles.accountLine}>
             <p css={{ ...styles.accountColumnOne, ...styles.accountText }}>Reg:</p>
@@ -29,6 +29,7 @@ const Wishlist = ({ location }) => (
             <p css={{ ...styles.accountColumnOne, ...styles.accountText }}>Konto:</p>
             <p css={styles.accountText}>4022057796</p>
           </div>
+          <p css={{ marginBottom: '2rem' }}>Eller via MobilePay.</p>
         </div>
         <h3 css={{ color: colors.orange.darkest }}>Andre ønsker</h3>
         <ul>
@@ -68,7 +69,7 @@ const styles = {
     color: colors.orange.darker
   },
   accountContainer: {
-    marginBottom: '2rem',
+    marginBottom: '.25rem',
     padding: '0 1rem'
   },
   accountLine: {
