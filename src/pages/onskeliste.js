@@ -5,15 +5,28 @@ import { darken } from 'polished'
 
 import Container from '../components/container'
 import Layout from '../components/layout'
-import LinkIcon from '../components/linkIcon'
 import SEO from '../components/seo'
 
-import wishLinkStyles from '../components/styled/wishLinkStyles'
-
 import { colors } from '../utils/theme'
+import ListItem from '../components/listItem'
+
+const list = [
+  { key: 'oplevelser', text: 'Oplevelser med giveren' },
+  { key: 'kassrolle', text: 'Eva Solo kasserolle 1,1L rustfrit stål', link: 'https://www.evasolo.com/da/kokken/gryder-og-pander/kasseroller/rustfrit-stal/202411/' },
+  { key: 'saute', text: 'Jamie Oliver Premium Stainless Steel Sauterpande 24cm', link: 'https://www.tefal.dk/Kogegrej/Gryder-%26-pander/Advanced/Jamie-Oliver-Premium-Stainless-Steel/p/R-JO-Premium-Stainless-steel-NO' },
+  { key: 'granit', text: 'Mørk granitplade til køkken (49 x 57 x 2.7 cm)' },
+  { key: 'vaegt', text: 'Køkkenvægt' },
+  { key: 'rister', text: 'Brødrister' },
+  { key: 'vacuum', text: 'Støvsuger (Nilfisk Select LBCO13P08A1)', link: 'https://www.skousen.dk/hus-have/stoevsuger/stoevsuger/product/nilfisk-select-lbco13p08a1/' },
+  { key: 'sousvide', text: 'Sous-vide' },
+  { key: 'utencils', text: 'Villeroy & Boch Arthur bestik', link: 'https://www.illumsbolighus.dk/shop/arthur-bestikaeske-24-dele-901117632' },
+  { key: 'bubbles', text: 'Bobbler', link: 'https://www.youtube.com/watch?v=5NzPd-xW4YY' },
+  { key: 'mummi', text: 'Mumi serveringstallerken', link: 'https://www.illumsbolighus.dk/shop/mumi-serveringstallerken-venskab-900897924' },
+  { key: 'coffee', text: 'Mocca Master kaffemaskine' },
+]
 
 const Wishlist = ({ location }) => (
-  <Layout footer={true} path={location.pathname}>
+  <Layout marginTop={48} footer={true} path={location.pathname}>
     <SEO title="Ønskeliste" keywords={['bryllup', 'ønskeliste', 'praktisk info']} />
     <section css={styles.section}>
       <Container>
@@ -33,23 +46,7 @@ const Wishlist = ({ location }) => (
         </div>
         <h3 css={{ color: colors.orange.darkest }}>Andre ønsker</h3>
         <ul>
-          <li>Oplevelser med giveren</li>
-          <li>
-            <a href="https://www.evasolo.com/da/kokken/gryder-og-pander/kasseroller/rustfrit-stal/202411/" target="_blank" rel="noopener noreferer" css={wishLinkStyles}>
-              Eva Solo kasserolle 1,1L rustfrit stål
-              <LinkIcon width={12} height={12} css={{ marginLeft: 8 }} />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.tefal.dk/Kogegrej/Gryder-%26-pander/Advanced/Jamie-Oliver-Premium-Stainless-Steel/p/R-JO-Premium-Stainless-steel-NO" target="_blank" rel="noopener noreferer" css={wishLinkStyles}>
-              Jamie Oliver Premium Stainless Steel Sauterpande 24cm
-              <LinkIcon width={12} height={12} />
-            </a>
-          </li>
-          <li>Mørk granitplade til køkken (49 x 57 x 2.7 cm)</li>
-          <li>Køkkenvægt</li>
-          <li>Brødrister</li>
-          <li>Støvsuger</li>
+          {list.map(item => <ListItem key={item.key} text={item.text} link={item.link} />)}
         </ul>
       </Container>
     </section>
