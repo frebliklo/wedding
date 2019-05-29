@@ -24,13 +24,13 @@ class Layout extends React.Component {
   }
   
   render() {
-    const { children, footer, path } = this.props
+    const { children, footer, path, marginTop } = this.props
     const { minHeight } = this.state
 
     return (
       <div css={{ ...styles.screen, minHeight }} >
         <Nav location={path} />
-        <main css={styles.content}>{children}</main>
+        <main css={{ ...styles.content, marginTop }}>{children}</main>
         {footer && <Footer />}
       </div>
     )
@@ -48,14 +48,15 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 1
+    flex: 1,
   }
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   footer: PropTypes.bool,
-  path: PropTypes.string.isRequired
+  path: PropTypes.string.isRequired,
+  marginTop: PropTypes.number,
 }
 
 Layout.defaultProps = {
