@@ -1,3 +1,8 @@
+/* eslint-disable no-undef */
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Sara + Frederik',
@@ -30,6 +35,14 @@ module.exports = {
         theme_color: '#FFFEF4',
         display: 'fullscreen',
         icon: 'src/images/site-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: '5d5j1p0zu4ax',
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
