@@ -13,7 +13,11 @@ const PracticalInfo = ({ location }) => (
     <section css={styles.section}>
       <Container>
         <h1 css={styles.title}>Praktisk info</h1>
-        <h2>Indlogering</h2>
+        <h2>Ankomst</h2>
+        <p>Alle er velkomne på kolonien fra lørdag kl13.00, dog er der først planlagt program fra kl16.00.</p>
+        <p>Parkering kan ske på fodboldbanen foran kolonien.</p>
+        <p>Der er to kolonier på samme vej. Vi holder til på Nørrevang, som er for enden af vejen.</p>
+        <h2>Indlogering og sovesale</h2>
         <p>Der vil være sovepladser på firemands sovesale til alle gæster, der vil blive og sove.</p>
         <p>Gæster skal selv medbringe følgende:</p>
         <ul>
