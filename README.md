@@ -6,11 +6,11 @@ Static with information to the guests of my wedding :D Hosted on Netlify at [sar
 
 ## Technologies
 
-The site is built with Gatsby to make it easy to build a static site written in React. The plugin system also makes it possible to easily integrate stuff, that would otherwise require a little more setup.
+The site is built with Gatsby to make it easy to build a static site written in React.
 
-Styling is done with Emotion because I wanted to experiment with writing object styles as well as having the possibility to write some good old CSS.
+Styling is done with Emotion because I wanted to experiment with writing object styles as well as having the possibility to write standard CSS and mix the two.
 
-Animations are done with Pose which is insanely awesome - if you work with React you need to check it out.
+Animations are done with Pose.
 
 ### Local messing around
 
