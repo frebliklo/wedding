@@ -17,7 +17,8 @@ const PracticalInfo = ({ location }) => (
       <Container>
         <h1 css={styles.title}>Praktisk info</h1>
         <h2>Indslag</h2>
-        <p>Toastmaster for aftenen er Simon Grey</p>
+        <p>Toastmaster for aftenen er Simon Gray
+</p>
         <p>
           Taler og kreative indslag må gerne meldes til toastmasteren helst en
           uge før festen
