@@ -17,8 +17,10 @@ const PracticalInfo = ({ location }) => (
       <Container>
         <h1 css={styles.title}>Praktisk info</h1>
         <h2>Indslag</h2>
-        <p>Toastmaster for aftenen er Simon Gray
-</p>
+        <p>
+          Toastmaster for aftenen er Simon Gray. Man kan kontakte Simon på
+          simongray@gmail.com
+        </p>
         <p>
           Taler og kreative indslag må gerne meldes til toastmasteren helst en
           uge før festen
@@ -47,6 +49,8 @@ const PracticalInfo = ({ location }) => (
         </ul>
         <p>Sovesale skal fejes inden afrejse.</p>
         <p>Afrejse senest kl.16.00 søndag</p>
+        <h2>Dresscode</h2>
+        <p>Kom i noget, som du selv synes er rigtig flot og festligt</p>
       </Container>
     </section>
   </Layout>
