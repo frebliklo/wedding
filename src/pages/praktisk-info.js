@@ -42,7 +42,7 @@ const PracticalInfo = ({ location }) => (
         </p>
         <p>Gæster skal selv medbringe følgende:</p>
         <ul>
-          <li>Lagen</li>
+          <li>Lagen (enkeltmandslagn)</li>
           <li>Sengetøj</li>
           <li>Dyne eller sovepose</li>
           <li>Håndklæde</li>
@@ -64,16 +64,16 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   title: {
     fontSize: '3rem',
-    color: colors.orange.darker
-  }
+    color: colors.orange.darker,
+  },
 }
 
 PracticalInfo.propTypes = {
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 }
 
 export default PracticalInfo
