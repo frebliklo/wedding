@@ -42,7 +42,7 @@ const PracticalInfo = ({ location }) => (
         </p>
         <p>Gæster skal selv medbringe følgende:</p>
         <ul>
-          <li>Lagen (enkeltmandslagn)</li>
+          <li>Lagen (enkeltmandslagen)</li>
           <li>Sengetøj</li>
           <li>Dyne eller sovepose</li>
           <li>Håndklæde</li>
