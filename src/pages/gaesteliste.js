@@ -31,7 +31,7 @@ const friends = [
   'Laura',
   'Kasper N',
   'Lisa',
-  'Schjeldahl',
+  'Jesper',
   'Benjamin',
   'Sabrina',
   'Simon',
