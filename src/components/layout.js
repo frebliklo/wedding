@@ -11,24 +11,28 @@ class Layout extends React.Component {
     super(props)
 
     this.state = {
-      minHeight: 667
+      minHeight: 667,
     }
   }
 
   componentDidMount() {
-    window.addEventListener('resize', () => this.setState({ minHeight: window.innerHeight }))
+    window.addEventListener('resize', () =>
+      this.setState({ minHeight: window.innerHeight })
+    )
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', () => this.setState({ minHeight: window.innerHeight }))
+    window.removeEventListener('resize', () =>
+      this.setState({ minHeight: window.innerHeight })
+    )
   }
-  
+
   render() {
     const { children, footer, path, marginTop } = this.props
     const { minHeight } = this.state
 
     return (
-      <div css={{ ...styles.screen, minHeight }} >
+      <div css={{ ...styles.screen, minHeight }}>
         <Nav location={path} />
         <main css={{ ...styles.content, marginTop }}>{children}</main>
         {footer && <Footer />}
@@ -42,6 +46,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    padding: '4.8rem 0 0',
   },
   content: {
     display: 'flex',
@@ -49,7 +54,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-  }
+  },
 }
 
 Layout.propTypes = {
@@ -60,7 +65,7 @@ Layout.propTypes = {
 }
 
 Layout.defaultProps = {
-  footer: true
+  footer: true,
 }
 
 export default Layout
