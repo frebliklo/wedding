@@ -16,33 +16,33 @@ const list = [
     key: 'kassrolle',
     text: 'Eva Solo kasserolle 1,3L rustfrit stål',
     link:
-      'https://www.evasolo.com/da/kokken/gryder-og-pander/kasseroller/rustfrit-stal/202413/'
+      'https://www.evasolo.com/da/kokken/gryder-og-pander/kasseroller/rustfrit-stal/202413/',
   },
   {
     key: 'suatepande',
     text: 'Eva Solo sautepande 24cm',
     link:
-      'https://www.evasolo.com/da/kokken/gryder-og-pander/sauterpander/rustfrit-stal/212424/'
+      'https://www.evasolo.com/da/kokken/gryder-og-pander/sauterpander/rustfrit-stal/212424/',
   },
   { key: 'granit', text: 'Mørk granitplade til køkken (49 x 57 x 2.7 cm)' },
   {
     key: 'vacuum',
     text: 'Støvsuger (Nilfisk Select LBCO13P08A1)',
     link:
-      'https://www.skousen.dk/hus-have/stoevsuger/stoevsuger/product/nilfisk-select-lbco13p08a1/'
+      'https://www.skousen.dk/hus-have/stoevsuger/stoevsuger/product/nilfisk-select-lbco13p08a1/',
   },
   { key: 'sousvide', text: 'Sous-vide' },
   {
     key: 'utencils',
     text: 'Villeroy & Boch Arthur bestik',
     link:
-      'https://www.illumsbolighus.dk/shop/arthur-bestikaeske-24-dele-901117632'
+      'https://www.illumsbolighus.dk/shop/arthur-bestikaeske-24-dele-901117632',
   },
   {
     key: 'bubbles',
     text: 'Bobbler',
-    link: 'https://www.youtube.com/watch?v=5NzPd-xW4YY'
-  }
+    link: 'https://www.youtube.com/watch?v=5NzPd-xW4YY',
+  },
 ]
 
 const Wishlist = ({ location }) => (
@@ -95,30 +95,30 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   title: {
     fontSize: '3rem',
-    color: colors.orange.darker
+    color: colors.orange.darker,
   },
   accountContainer: {
     marginBottom: '.25rem',
-    padding: '0 1rem'
+    padding: '0 1rem',
   },
   accountLine: {
-    display: 'flex'
+    display: 'flex',
   },
   accountColumnOne: {
-    width: '3rem'
+    width: '3rem',
   },
   accountText: {
     marginBottom: '.5rem',
-    color: darken(0.2, colors.green.darkest)
-  }
+    color: darken(0.2, colors.green.darkest),
+  },
 }
 
 Wishlist.propTypes = {
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 }
 
 export default Wishlist
