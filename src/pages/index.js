@@ -17,19 +17,18 @@ class IndexPage extends React.Component {
       reception: {
         title: 'Reception',
         date: '15. juni 12:00',
-        location: 'Københavns Rådhus'
+        location: 'Københavns Rådhus',
       },
       party: {
         title: 'Fest',
         date: '26. oktober 16:00',
-        location: 'Nørrevang, Rørvig'
-      }
+        location: 'Nørrevang, Rørvig',
+      },
     }
-  
   }
 
   handleResize = () => {
-    if(window.innerWidth <= breakpoints[0]) {
+    if (window.innerWidth <= breakpoints[0]) {
       this.setState({
         reception: {
           ...this.state.reception,
@@ -37,8 +36,8 @@ class IndexPage extends React.Component {
         },
         party: {
           ...this.state.party,
-          date: '26 / 10'
-        }
+          date: '26 / 10',
+        },
       })
     } else {
       this.setState({
@@ -48,14 +47,14 @@ class IndexPage extends React.Component {
         },
         party: {
           ...this.state.party,
-          date: '26. oktober 16:00'
-        }
+          date: '26. oktober 16:00',
+        },
       })
     }
   }
 
   componentDidMount() {
-    if(window.innerWidth <= breakpoints[0]) {
+    if (window.innerWidth <= breakpoints[0]) {
       this.setState({
         reception: {
           ...this.state.reception,
@@ -63,8 +62,8 @@ class IndexPage extends React.Component {
         },
         party: {
           ...this.state.party,
-          date: '26 / 10'
-        }
+          date: '26 / 10',
+        },
       })
     }
 
@@ -100,7 +99,10 @@ class IndexPage extends React.Component {
               />
             </div>
           </Container>
-          <img css={styles.flowers} src="https://res.cloudinary.com/frebliklo/image/upload/c_scale,f_auto,q_auto,w_1600/v1549399485/wedding/blomster.png" />
+          <img
+            css={styles.flowers}
+            src="https://res.cloudinary.com/frebliklo/image/upload/c_scale,f_auto,q_auto,w_1600/v1549399485/wedding/blomster.png"
+          />
         </section>
       </Layout>
     )
@@ -111,11 +113,11 @@ const styles = {
   section: {
     position: 'relative',
     width: '100%',
-    height: '100vh',
+    minHeight: '90vh',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   title: {
     width: '100%',
@@ -131,7 +133,7 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   flowers: {
     position: 'absolute',
@@ -141,16 +143,16 @@ const styles = {
     left: 'auto',
     margin: 0,
     [mq[1]]: {
-      position: 'fixed'
+      position: 'fixed',
     },
     [mq[2]]: {
-      width: '60%'
-    }
-  }
+      width: '60%',
+    },
+  },
 }
 
 IndexPage.propTypes = {
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 }
 
 export default IndexPage

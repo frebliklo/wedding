@@ -46,7 +46,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    padding: '4.8rem 0 0',
   },
   content: {
     display: 'flex',
@@ -66,6 +65,7 @@ Layout.propTypes = {
 
 Layout.defaultProps = {
   footer: true,
+  marginTop: 48,
 }
 
 export default Layout

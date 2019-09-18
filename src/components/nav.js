@@ -108,7 +108,7 @@ class Nav extends React.Component {
 
 const styles = {
   menuButton: {
-    position: 'absolute',
+    position: 'fixed',
     top: 16,
     right: 'auto',
     bottom: 'auto',
