@@ -21,19 +21,19 @@ const NavContainer = posed.nav({
     opacity: 0,
     staggerChildren: 50,
     staggerDirection: -1,
-    afterChildren: true
-  }
+    afterChildren: true,
+  },
 })
 
 const NavLink = posed(Link)({
   enter: {
     opacity: 1,
-    y: 0
+    y: 0,
   },
   exit: {
     opacity: 0,
-    y: 48
-  }
+    y: 48,
+  },
 })
 
 class Nav extends React.Component {
@@ -51,23 +51,23 @@ class Nav extends React.Component {
     ]
 
     this.state = {
-      navOpen: false
+      navOpen: false,
     }
   }
-  
+
   handleMenuClick = () => {
     this.setState({ navOpen: !this.state.navOpen })
   }
 
   handleLinkClick = target => {
-    if(target === this.props.location) {
+    if (target === this.props.location) {
       this.setState({ navOpen: false })
     }
   }
-  
+
   render() {
     const { navOpen } = this.state
-    
+
     return (
       <>
         <button css={styles.menuButton} onClick={this.handleMenuClick}>
@@ -93,13 +93,13 @@ class Nav extends React.Component {
                     to={to}
                     css={navLinkStyles}
                     onClick={() => this.handleLinkClick(to)}
-                  >  
+                  >
                     {label}
                   </NavLink>
                 )
               })}
-            </NavContainer>)
-          }
+            </NavContainer>
+          )}
         </PoseGroup>
       </>
     )
@@ -117,10 +117,10 @@ const styles = {
     cursor: 'pointer',
     border: 'none',
     background: 'transparent',
-    [mq[0]]: { left: 16 }
+    [mq[0]]: { left: 16 },
   },
   navContainer: {
-    position: 'absolute',
+    position: 'fixed',
     top: 0,
     right: 0,
     bottom: 0,
@@ -129,13 +129,13 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    background: rgba(colors.bg, .95),
-    zIndex: 1
-  }
+    background: rgba(colors.bg, 0.95),
+    zIndex: 1,
+  },
 }
 
 Nav.propTypes = {
-  location: PropTypes.string.isRequired
+  location: PropTypes.string.isRequired,
 }
 
 export default Nav
